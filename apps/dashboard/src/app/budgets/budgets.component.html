@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+    <budget-app-budget-list
+      [expenses]="allExpenses$ | async"
+      (selected)="selectExpense($event)"
+      (deleted)="deleteExpense($event)"
+      (expenseViewed)="viewExpense($event)"
+    ></budget-app-budget-list>
+  </div>
+  <div class="col-50" layout="row" layout-align="center center">
+    <budget-app-budget-details
+      [expense]="selectedExpense$ | async"
+      (saved)="saveExpense($event)"
+      (cancelled)="resetExpense()"
+      [form]="form"
+    ></budget-app-budget-details>
+  </div>
+</div>

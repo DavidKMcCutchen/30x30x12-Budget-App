@@ -13,9 +13,17 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
     "baseUrl": ".",
     "paths": {
-      "@budget-app/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@budget-app/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@budget-app/core-data": ["libs/core-data/src/index.ts"],
+      "@budget-app/core-state": ["libs/core-state/src/index.ts"],
+      "@budget-app/environment": ["libs/environment/src/index.ts"],
+      "@budget-app/material": ["libs/material/src/index.ts"],
+      "@budget-app/theme": ["libs/theme/src/index.ts"],
+      "@budget-app/ui-login": ["libs/ui-login/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Expenses</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let expense of expenses" data-test="expense-list-item" (click)="selected.emit(expense)">
+        <h3 matLine>{{expense.name}}</h3>
+        <p matLine> Total Expense Cost: ${{expense.value}}</p>
+        <p matLine> Expense Already Paid?: {{expense.paid}}</p>
+        
+        
+        <button mat-icon-button (click)="expenseViewed.emit(expense.id); $event.stopImmediatePropagation()">
+          <mat-icon *ngIf="!readonly">chevron_left</mat-icon>
+        </button>
+
+
+        <button mat-icon-button (click)="deleted.emit(expense); $event.stopImmediatePropagation()">
+          <mat-icon *ngIf="!readonly">delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

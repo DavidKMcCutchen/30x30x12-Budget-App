@@ -1,0 +1,8 @@
+
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+<div *ngIf="currentExpense$ | async as expense">
+  <budget-app-budget-info [expense]="currentExpense$ | async"></budget-app-budget-info>
+</div>
+</div>
+</div>

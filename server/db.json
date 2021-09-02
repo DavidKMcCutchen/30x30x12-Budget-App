@@ -1,0 +1,10 @@
+{
+  "expenses": [
+    {
+      "id": 1,
+      "name": "Food",
+      "value": "250",
+      "paid": "True"
+    }
+  ]
+}
